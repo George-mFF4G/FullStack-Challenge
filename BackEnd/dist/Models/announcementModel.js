@@ -6,7 +6,7 @@ const mongoose_1 = require("mongoose");
 exports.AnnouncementSchema = new mongoose_1.Schema({
     name: { type: String, required: true },
     date: { type: String, required: true },
-    text: { type: String, required: true }
+    text: { type: String, required: true },
 });
 //  Create a Model.
 exports.Announcement = (0, mongoose_1.model)('Announcement', exports.AnnouncementSchema);
