@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logInOut } from "../store/authSlice";
 
 const Login: React.FC = () => {
@@ -21,9 +21,6 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // console.log(`Email : ${email} and Password : ${password}`);
-    // setEmail("");
-    // setPassword("");
     dispatch(logInOut(), navigate("/dashboard"));
   };
 

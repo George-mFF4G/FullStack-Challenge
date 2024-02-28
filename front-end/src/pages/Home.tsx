@@ -1,13 +1,22 @@
 import React from "react";
+import { useIntl } from "react-intl";
 
 import AppBar from "../components/NavBar";
 
 const Home: React.FC = () => {
+  const intl = useIntl();
+  const locale = intl.locale;
+  console.log("Current Locale:", locale);
+  console.log("Current:", intl);
   return (
     <div>
       <AppBar />
-      <h2>Home</h2>
-      {/* Your home content goes here */}
+      <h2>
+        {intl.formatMessage({
+          id: "home.title",
+          defaultMessage: "Fallback Title",
+        })}
+      </h2>
     </div>
   );
 };

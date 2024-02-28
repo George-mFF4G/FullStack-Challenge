@@ -1,19 +1,14 @@
 import React from "react";
 
-import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
+
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
+
+// import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import HouseIcon from "@mui/icons-material/House";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -22,18 +17,20 @@ import SchoolIcon from "@mui/icons-material/School";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
+import image2 from "../../images/logo.png";
+
 const drawerWidth = 240;
 
-interface ListItem {
-  key: string;
-  text: string;
-  icon: React.ReactNode;
-}
+// interface ListItem {
+//   key: string;
+//   text: string;
+//   icon: React.ReactNode;
+// }
 
-interface ListProps {
-  items: ListItem[];
-  drawerWidth: number;
-}
+// interface ListProps {
+//   items: ListItem[];
+//   drawerWidth: number;
+// }
 
 const items = [
   { key: "dashboard", text: "DashBoard", icon: <HouseIcon /> },
@@ -53,17 +50,14 @@ export default function ErrorPage() {
         "& .MuiDrawer-paper": {
           width: drawerWidth,
           boxSizing: "border-box",
-          // backgroundColor: "pink",
-          // background: `linear-gradient(34deg, rgba(2,0,36,1) 0%, rgba(9,66,121,1) 35%, rgba(0,212,255,1) 100%)`,
           background: `linear-gradient(to bottom, rgb(48, 78, 95) 0% ,  rgb(38, 156, 213) 100%)`,
         },
       }}
       variant="permanent"
       anchor="left"
     >
-      <img src={`./images/logo.png`} alt={`alt text`} />
+      <img src={image2} alt={"text for alt"} />
       <Toolbar />
-      {/* <Divider /> */}
       <List>
         {items.map((item) => (
           <ListItemButton

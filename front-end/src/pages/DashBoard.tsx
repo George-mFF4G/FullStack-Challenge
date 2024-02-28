@@ -1,28 +1,29 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
+
 import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
+
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
+
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import DashBoardHeader from "../components/dashboard/DashBoardHeader";
 import DashBoardSideBar from "../components/dashboard/DashBoardSideBar";
-import MediaControlCard from "../components/MediaControlCard";
+
 import Grid from "@mui/material/Grid";
 
-const drawerWidth = 240;
+import DashBoardAnnounce from "../components/dashboard/DashBoardAnnounce";
+import AnnouncementList from "../components/announcements/AnnouncementList";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+import QuizList from "../components/quizes/QuizList";
 
 const Dashboard: React.FC = () => {
+  const theme = useTheme();
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box sx={{ display: "flex" }}>
       <DashBoardHeader />
@@ -30,61 +31,46 @@ const Dashboard: React.FC = () => {
       <DashBoardSideBar />
       <Box component="main" sx={{ flexGrow: 1, bgcolor: "lightgrey", p: 3 }}>
         <Toolbar />
-        {/* <MediaControlCard /> */}
+        <DashBoardAnnounce />
+
         <Grid
           container
           spacing={2}
-          sx={{ flexGrow: 1, bgcolor: "white", p: 3 }}
+          sx={{
+            marginTop: 3,
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", md: "row" },
+          }}
         >
-          <Grid item xs={8}>
-            {/* <Item>xs=8</Item> */}
-            <Typography variant="h2" component="h2">
+          <Grid
+            item
+            xs={12}
+            md={8}
+            sx={{ bgcolor: "white", height: { xs: "auto", md: "100%" } }}
+          >
+            <Typography variant="h4" component="h4">
               Exaxms Time
             </Typography>
-            <Typography component="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-            </Typography>
-            <Typography component="p" sx={{ marginTop: 3 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Typography>
+            <Typography component="p">Exaxms Time</Typography>
+            <AnnouncementList />
           </Grid>
-          <Grid item xs={4}>
-            {/* <Item>xs=4</Item> */}
+          <Grid
+            item
+            xs={12}
+            md={3}
+            sx={{
+              bgcolor: "white",
+              padding: "10px",
+              marginTop: isMediumScreen ? 3 : 0,
+            }}
+          >
+            <Typography variant="h4" component="h4">
+              Exaxms Time
+            </Typography>
+            <Typography component="p">Exams Time</Typography>
+            <QuizList />
           </Grid>
         </Grid>
-
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
       </Box>
     </Box>
   );

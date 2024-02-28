@@ -1,65 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { AppRouter } from './router/router';
-
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { AppRouter } from "./router/router";
+import { IntlProvider } from "react-intl";
+import getIntl from "./i10n";
 function App() {
+  const locale = navigator.language || "en"; // Default to English if the browser doesn't provide a language
+  const intl = getIntl(locale);
   return (
     <Router>
-      <AppRouter />
+      <IntlProvider locale={locale} messages={intl.messages}>
+        <AppRouter />
+      </IntlProvider>
     </Router>
   );
 }
 
-
 export default App;
-
-// import { RouterProvider } from "react-router-dom";
-// import router from "./router";
-// import { BrowserRouter as Router } from 'react-router-dom';
-
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import SideBar from './components/Sidebar';
-// import Home from './components/Home';
-// import DashBoard from './components/DashBoard';
-// import Login from './components/Login';
-// import AuthButton from './components/AuthButton';
-// import SignInPage from './features/auth/SignInPage';
-// import SignOutPage from './features/auth/SignOutPage';
-// import PrivateRoute from './features/auth/PrivateRoute';
-
-
-
-
-
-
-
-
-
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import { AppRouter } from './router/router';
-// import Home from './components/Home';
-// import DashBoard from './components/DashBoard';
-// import Login from './components/Login';
-// import ErrorPage from './components/ErrorPage';
-
-// import { Container, CssBaseline, Grid, Paper } from '@mui/material';
-
-
-// function App() {
-//   return (
-//     <Router>
-//     <AppRouter>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/dashboard" element={<DashBoard />} />
-//         <Route path="/login" element={<Login />} />
-//       </Routes>
-//     </AppRouter>
-//   </Router>
-//   );
-// }
-
-// export default App;
-
