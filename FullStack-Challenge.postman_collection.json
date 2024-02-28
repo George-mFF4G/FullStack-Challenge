@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "7b45f27e-fde1-490c-9761-2f0736b72212",
+		"name": "FullStack-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22708620"
+	},
+	"item": [
+		{
+			"name": "announcements",
+			"item": [
+				{
+					"name": "create announcement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/announcements",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all announcements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/announcements",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific announcement",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/announcements/65dbcdf8fa2ec884d65c035d",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"announcements",
+								"65dbcdf8fa2ec884d65c035d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update announcement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement updated\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet.\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/announcements/65de643a571e2851139d8f36",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"announcements",
+								"65de643a571e2851139d8f36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete announcement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/announcements/65dbd4f6be42f9e65a065141",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"announcements",
+								"65dbd4f6be42f9e65a065141"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quizes",
+			"item": [
+				{
+					"name": "create quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"first course\",\r\n    \"due\":\"30-10-2001\",\r\n    \"course\":\"text course\",\r\n    \"topic\":\"text course\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/quizes",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"quizes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all quizez",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/announcements",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"announcements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific announcement",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/quizes/65dbde02c52d30dbd22b39b6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"quizes",
+								"65dbde02c52d30dbd22b39b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update announcement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"first course update\",\r\n    \"due\":\"30-10-2001\",\r\n    \"course\":\"text course\",\r\n    \"topic\":\"text course\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/quizes/65dbde02c52d30dbd22b39b6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"quizes",
+								"65dbde02c52d30dbd22b39b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete announcement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"first announcement\",\r\n    \"date\":\"30-10-2001\",\r\n    \"text\":\"text announcement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/quizes/65dbde70c52d30dbd22b39bc",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"quizes",
+								"65dbde70c52d30dbd22b39bc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test-api",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
