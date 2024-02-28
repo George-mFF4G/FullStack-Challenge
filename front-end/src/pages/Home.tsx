@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <h2>
         {intl.formatMessage({
           id: "home.title",
-          defaultMessage: "Fallback Title",
+          defaultMessage: "Home",
         })}
       </h2>
     </div>
